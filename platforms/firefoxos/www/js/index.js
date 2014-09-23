@@ -53,41 +53,41 @@ var app = {
 	
 };
 
-		whereAmI: function(){
-		
-		navigator.geolocation.getCurrentPosition(app.successCallback, app.errorCallback, 
+		function whereAmi(){
+		navigator.geolocation.getCurrentPosition(successCallback, errorCallback, 
 									{
 										enableHighAccuracy: true,
 										timeout: 5000
 								});
 		
-		successCallback: function(position) {
+		function successCallback(position) {
 			var msg = "You are at latitude = " + position.coords.latitude + 
 						" longitude = " + position.coords.longitude;
 			alert(msg);
 		}
 		
-		errorCallback: function(error) {
+		function errorCallback(error) {
 		  alert(error.code);
 		}
-		
 		navigator.geolocation.getCurrentPosition(successCallback, errorCallback, 
 							{
 								enableHighAccuracy: true,
 								timeout: 5000
 						});
 
-		successCallback: function(position) {
+		function successCallback(position) {
 			var msg = "You are at latitude = " + position.coords.latitude + 
 						" longitude = " + position.coords.longitude;
 			alert(msg);
 		}
 		
-		errorCallback: function(error) {
+		function errorCallback(error) {
 		  alert(error.code);
 		}	
 		
-			
+		"http://open.mapquestapi.com/geocoding/v1/reverse?" + 
+								"key=Fmjtd|luur2hurn0%2Cbg%3Do5-9wasly&location=" +
+            position.coords.latitude + "," + position.coords.longitude	
 }
 		
 		
